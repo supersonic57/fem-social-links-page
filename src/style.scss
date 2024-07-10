@@ -1,0 +1,81 @@
+@import "reset";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&\
+             display=swap');
+
+// Colors
+
+$green: hsl(75, 94%, 57%);
+$white: hsl(0, 0%, 100%);
+$grey: hsl(0, 0%, 20%);
+$dark-grey: hsl(0, 0%, 12%);
+$off-black: hsl(0, 0%, 8%);
+
+// Styling
+
+body {
+  background-color: $off-black;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.component {
+  background-color: $dark-grey;
+  color: $white;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  text-align: center;
+  width: 375px;
+  padding: 40px;
+  border-radius: 10px;
+
+  @media screen and (max-width: 400px) {
+    width: 85%;
+    padding: 25px;
+  }
+
+  img {
+    margin: auto;
+    width: 90px;
+    border-radius: 50%;
+    margin-bottom: 25px;
+  }
+
+  h1 {
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+
+  p.location {
+    color: $green;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+
+  p.bio {
+    margin-bottom: 25px;
+  }
+
+  button {
+    display: block;
+    width: 100%;
+    background-color: $grey;
+    color: $white;
+    font-weight: 700;
+    border: none;
+    border-radius: 7px;
+    padding: 10px 0;
+    margin-bottom: 15px;
+
+    &:hover {
+      cursor: pointer;
+      background-color: $green;
+      color: $dark-grey;
+    }
+  }
+}
